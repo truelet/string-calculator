@@ -1,0 +1,26 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "string-calculator"
+  ],
+  "homepage": "https://github.com/truelet/string-calculator#readme",
+  "bugs": {
+    "url": "https://github.com/truelet/string-calculator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truelet/string-calculator.git"
+  },
+  "license": "ISC",
+  "author": "amit.yadav",
+  "type": "commonjs",
+  "main": "stringCalculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.0.3"
+  }
+}
