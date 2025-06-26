@@ -8,7 +8,7 @@ const add = (numbers) => {
     if (!numbers) {
         return 0;
     }
-    return 0; // Placeholder for now
+    return parseInt(numbers); // Placeholder for now
 };
 
 module.exports = { add };
