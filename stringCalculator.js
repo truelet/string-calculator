@@ -9,6 +9,13 @@ const add = (numbers) => {
         return 0;
     }
     
+    // Check for custom delimiter
+    if(numbers.slice(0, 2) === '//') {
+        const delimiterEndIndex = numbers.indexOf('\n');
+        const delimiter = numbers.slice(2, delimiterEndIndex);
+        const newNumbers = numbers.split('\n')[1];
+        numbers = newNumbers.replaceAll(delimiter, ',');
+    }
     // Replace new line characters with commas to handle both delimiters
     numbers = numbers.replace(/\n/g, ',');
 

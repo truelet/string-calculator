@@ -19,4 +19,10 @@ describe('String Calculator', () => {
         expect(add("1\n5")).toBe(6);
         expect(add("4,3\n1")).toBe(8);
     });
+
+    test('should return sum of the strings with any delimiters as per the regex', () => {
+        expect(add("//;\n1;5")).toBe(6);
+        expect(add("//-\n4-3-1")).toBe(8);
+        expect(add("//@\n4@3@1")).toBe(8);
+    });
 });
