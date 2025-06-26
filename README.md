@@ -1,5 +1,4 @@
 # string-calculator
--------------------
 
 **Steps to start project**
 
