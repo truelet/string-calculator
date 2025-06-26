@@ -25,4 +25,9 @@ describe('String Calculator', () => {
         expect(add("//-\n4-3-1")).toBe(8);
         expect(add("//@\n4@3@1")).toBe(8);
     });
+
+    test('should return error with negative numbers when negative numbers passed in string', () => {
+        expect(() => add("1,-5").toThrow("negative numbers not allowed -5"));
+        expect(() => add("-4,-3,1").toThrow("negative numbers not allowed -4,-3"));
+    });
 });
