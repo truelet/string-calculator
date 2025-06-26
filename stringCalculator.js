@@ -22,12 +22,17 @@ const add = (numbers) => {
     // Split the string by commas to get individual numbers
     const numberList = numbers.split(',');
     
+    // handle emtpy number list
+    if(numberList.length === 0 || (numberList.length === 1 && numberList[0] === '')) {
+        return 0;
+    }
+    
     // Check for negative numbers
     const negativeNumbers = numberList.filter(num => num < 0);
     if(negativeNumbers.length > 0) {
         throw new Error(`negative numbers not allowed ${negativeNumbers.join(',')}`);
     }
-    
+
     if (numberList.length === 1) {
         return parseInt(numberList[0]);
     }

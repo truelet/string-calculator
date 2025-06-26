@@ -30,4 +30,12 @@ describe('String Calculator', () => {
         expect(() => add("1,-5").toThrow("negative numbers not allowed -5"));
         expect(() => add("-4,-3,1").toThrow("negative numbers not allowed -4,-3"));
     });
+
+    test('should return error with single negative number', () => {
+        expect(() => add("-5").toThrow("negative numbers not allowed -5"));
+    });
+
+    test('should return 0 when having custom delimiter without numbers', () => {
+        expect(add("//;\n")).toBe(0);
+    });
 });
