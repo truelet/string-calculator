@@ -8,6 +8,11 @@ const add = (numbers) => {
     if (!numbers) {
         return 0;
     }
+    
+    // Replace new line characters with commas to handle both delimiters
+    numbers = numbers.replace(/\n/g, ',');
+
+    // Split the string by commas to get individual numbers
     const numberList = numbers.split(',');
     if (numberList.length === 1) {
         return parseInt(numberList[0]);

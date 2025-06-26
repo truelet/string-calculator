@@ -14,4 +14,9 @@ describe('String Calculator', () => {
         expect(add("1,5")).toBe(6);
         expect(add("3,2")).toBe(5);
     });
+
+    test('should return sum of the strings with new line delimiters', () => {
+        expect(add("1\n5")).toBe(6);
+        expect(add("4,3\n1")).toBe(8);
+    });
 });
