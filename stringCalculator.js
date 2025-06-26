@@ -8,7 +8,11 @@ const add = (numbers) => {
     if (!numbers) {
         return 0;
     }
-    return parseInt(numbers); // Placeholder for now
+    const numberList = numbers.split(',');
+    if (numberList.length === 1) {
+        return parseInt(numberList[0]);
+    }
+    return numberList.reduce((sum, num) => sum + parseInt(num), 0);
 };
 
 module.exports = { add };
