@@ -38,4 +38,10 @@ describe('String Calculator', () => {
     test('should return 0 when having custom delimiter without numbers', () => {
         expect(add("//;\n")).toBe(0);
     });
+
+    test('should ignore adding numbers bigger then 1000', () => {
+        expect(add("3,1001")).toBe(3);
+        expect(add("1000,1001,500")).toBe(1500);
+        expect(add("1001")).toBe(0);
+    });
 });

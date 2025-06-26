@@ -33,10 +33,15 @@ const add = (numbers) => {
         throw new Error(`negative numbers not allowed ${negativeNumbers.join(',')}`);
     }
 
-    if (numberList.length === 1) {
-        return parseInt(numberList[0]);
+    // Ignore numbers greater than 1000
+    const filteredNumbers = numberList.filter(num => parseInt(num) <= 1000);
+
+    if (filteredNumbers.length === 1) {
+        return parseInt(filteredNumbers[0]);
     }
-    return numberList.reduce((sum, num) => sum + parseInt(num), 0);
+
+    // return the sum of the numbers
+    return filteredNumbers.reduce((sum, num) => sum + parseInt(num), 0);
 };
 
 module.exports = { add };
